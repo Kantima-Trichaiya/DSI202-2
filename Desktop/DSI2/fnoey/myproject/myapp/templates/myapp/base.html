@@ -1,47 +1,57 @@
-<!-- /myproject/myapp/templates/myapp/base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Equipment Rental{% endblock %}</title>
-    <!-- Google Fonts: Noto Sans Thai -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Override Tailwind's font-sans with Noto Sans Thai */
-        body {
-            font-family: 'Noto Sans Thai', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Equipment Rental{% endblock %}</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans Thai', sans-serif;
+    }
+
+    /* เพิ่มการขยายขนาดปุ่มเมื่อ hover */
+    .nav-button:hover {
+      transform: scale(1.1); /* ขยายขนาดปุ่ม */
+      transition: transform 0.3s ease; /* ทำให้การขยายดูนุ่มนวล */
+    }
+  </style>
 </head>
 <body class="bg-gray-100">
-    <!-- Header with Navigation (Facebook-like dark blue) -->
-    <header class="bg-[#155c94] text-white p-4 shadow">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">
-                <a href="{% url 'home' %}" class="hover:text-gray-200 transition">CareEveryHome</a>
-            </h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="{% url 'home' %}" class="hover:text-gray-200 transition">Home</a></li>
-                    <li><a href="{% url 'equipment_list' %}" class="hover:text-gray-200 transition">Product</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="bg-[#155c94] text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="{% url 'home' %}" class="text-2xl md:text-3xl font-bold tracking-wide hover:opacity-90 transition ease-in-out">
+        CareEveryHome
+      </a>
+      <!-- Nav Buttons -->
+      <nav class="flex gap-6">
+        <!-- Home Button -->
+        <a href="{% url 'home' %}" class="text-white font-medium px-4 py-2 rounded-lg nav-button">
+          Home
+        </a>
+        <!-- Product Button -->
+        <a href="{% url 'equipment_list' %}" class="text-white font-medium px-4 py-2 rounded-lg nav-button">
+          Product
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-6">
-        {% block content %}
-        {% endblock %}
-    </main>
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto p-6">
+    {% block content %}
+    {% endblock %}
+  </main>
 
-    <!-- Footer (Facebook-like light gray) -->
-    <footer class="bg-white text-gray-600 py-4 mt-6">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-          <p class="text-sm">&copy; 2025 Care Every Home. All rights reserved.</p>
-        </div>
-      </footer>      
+  <!-- Footer -->
+  <footer class="bg-white text-gray-600 py-4 mt-10 border-t">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-sm">&copy; 2025 Care Every Home. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

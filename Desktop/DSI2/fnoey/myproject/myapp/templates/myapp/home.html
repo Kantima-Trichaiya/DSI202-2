@@ -1,63 +1,63 @@
 {% extends 'myapp/base.html' %}
 {% block title %}Equipment Rental Home{% endblock %}
 {% block content %}
-  <!-- Hero Section -->
-  <section class="bg-blue-50 py-12">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-extrabold text-blue-700 mb-4">Affordable, Reliable Medical Equipment</h2>
-      <p class="text-lg text-gray-700 mb-6">Supporting your care at home or on the go</p>
-      <a href="{% url 'equipment_list' %}" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl text-lg hover:bg-blue-700 transition">View Our Products</a>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="bg-[#e6f0f8] py-16"> <!-- ฟ้าอ่อน -->
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-extrabold text-[#155c94] mb-4">Affordable, Reliable Medical Equipment</h2>
+    <p class="text-lg text-gray-700 mb-6">Supporting your care at home or on the go</p>
+    <a href="{% url 'equipment_list' %}" class="inline-block bg-[#155c94] text-white px-6 py-3 rounded-xl text-lg font-medium hover:bg-[#0f4b78] hover:scale-105 transform transition duration-300 ease-in-out">View Our Products</a>
+  </div>
+</section>
 
-  <!-- Features Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
-      <div>
-        <img src="https://img.icons8.com/ios-filled/100/4a90e2/hospital-bed.png" alt="Wide Selection" class="mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold mb-2">Wide Selection</h3>
-        <p class="text-gray-600">Choose from hospital beds, wheelchairs, oxygen concentrators, and more</p>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/100/4a90e2/clock--v1.png" alt="Flexible Rentals" class="mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold mb-2">Flexible Rentals</h3>
-        <p class="text-gray-600">Rent equipment by month with easy return options</p>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/100/4a90e2/delivery.png" alt="Fast Delivery" class="mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
-        <p class="text-gray-600">Quick delivery and setup, so you can focus on what matters most</p>
-      </div>
+<!-- Features Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
+    <div class="p-6 rounded-xl shadow-md bg-[#f2f7fb] hover:shadow-xl hover:scale-105 transform transition duration-300">
+      <img src="https://img.icons8.com/ios-filled/100/155c94/hospital-bed.png" alt="Wide Selection" class="mx-auto mb-4"/>
+      <h3 class="text-xl font-semibold text-[#155c94] mb-2">Wide Selection</h3>
+      <p class="text-gray-600">Choose from hospital beds, wheelchairs, oxygen concentrators, and more</p>
     </div>
-  </section>
+    <div class="p-6 rounded-xl shadow-md bg-[#f2f7fb] hover:shadow-xl hover:scale-105 transform transition duration-300">
+      <img src="https://img.icons8.com/ios-filled/100/155c94/clock--v1.png" alt="Flexible Rentals" class="mx-auto mb-4"/>
+      <h3 class="text-xl font-semibold text-[#155c94] mb-2">Flexible Rentals</h3>
+      <p class="text-gray-600">Rent equipment by month with easy return options</p>
+    </div>
+    <div class="p-6 rounded-xl shadow-md bg-[#f2f7fb] hover:shadow-xl hover:scale-105 transform transition duration-300">
+      <img src="https://img.icons8.com/ios-filled/100/155c94/delivery.png" alt="Fast Delivery" class="mx-auto mb-4"/>
+      <h3 class="text-xl font-semibold text-[#155c94] mb-2">Fast Delivery</h3>
+      <p class="text-gray-600">Quick delivery and setup, so you can focus on what matters most</p>
+    </div>
+  </div>
+</section>
 
-  <!-- How It Works -->
-  <section id="how-it-works" class="py-16 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">How It Works</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white shadow-md rounded-lg">
-          <h4 class="font-semibold text-lg mb-2">1. Browse Equipment</h4>
-          <p class="text-gray-600">Find the right tools for your recovery or care plan</p>
-        </div>
-        <div class="p-6 bg-white shadow-md rounded-lg">
-          <h4 class="font-semibold text-lg mb-2">2. Choose Rental Period</h4>
-          <p class="text-gray-600">Select how long you need it – with flexibility and no hidden fees</p>
-        </div>
-        <div class="p-6 bg-white shadow-md rounded-lg">
-          <h4 class="font-semibold text-lg mb-2">3. Get It Delivered</h4>
-          <p class="text-gray-600">We bring it to your door and show you how to use it safely</p>
-        </div>
+<!-- How It Works -->
+<section id="how-it-works" class="py-20 bg-[#e6f0f8]">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-[#155c94] mb-10">How It Works</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300">
+        <h4 class="font-semibold text-lg text-[#155c94] mb-2">1. Browse Equipment</h4>
+        <p class="text-gray-600">Find the right tools for your recovery or care plan</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300">
+        <h4 class="font-semibold text-lg text-[#155c94] mb-2">2. Choose Rental Period</h4>
+        <p class="text-gray-600">Select how long you need it – with flexibility and no hidden fees</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300">
+        <h4 class="font-semibold text-lg text-[#155c94] mb-2">3. Get It Delivered</h4>
+        <p class="text-gray-600">We bring it to your door and show you how to use it safely</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-blue-700 mb-4">Get in Touch</h2>
-      <p class="text-gray-600 mb-6">Have questions? We're here to help you find the right care equipment.</p>
-      <a href="mailto:support@careeveryhome.com" class="text-blue-600 underline">support@careeveryhome.com</a>
-    </div>
-  </section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-[#155c94] mb-4">Get in Touch</h2>
+    <p class="text-gray-600 text-lg mb-6">Have questions? We're here to help you find the right care equipment.</p>
+    <a href="mailto:support@careeveryhome.com" class="text-[#155c94] underline hover:text-[#0f4b78] transition">support@careeveryhome.com</a>
+  </div>
+</section>
 {% endblock %}

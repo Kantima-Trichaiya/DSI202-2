@@ -63,3 +63,6 @@ class EquipmentListCreateAPIView(generics.ListCreateAPIView):
 class EquipmentRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
     queryset = Equipment.objects.all()
     serializer_class = EquipmentSerializer
+
+
+
