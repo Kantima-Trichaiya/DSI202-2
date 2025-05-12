@@ -1,0 +1,7 @@
+# .gitignore
+.DS_Store
+.cache/
+.docker/
+.vscode/
+.wdm/
+*.pdf
