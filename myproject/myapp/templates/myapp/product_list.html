@@ -57,37 +57,40 @@
   <section id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {% for product in products %}
     <div class="relative bg-white p-5 rounded-2xl shadow-md hover:shadow-xl transition hover:scale-[1.03] flex flex-col">
-      
+
       <!-- Favorite / Cart -->
       {% if user.is_authenticated %}
-        <form action="{% url 'toggle_favorite' product.pk %}" method="post" class="absolute top-3 right-3">
-          {% csrf_token %}
-          <button type="submit">
-            {% if product.id in user_favorites %}
-              <i class="fas fa-heart text-red-500 text-xl"></i>
-            {% else %}
-              <i class="far fa-heart text-[#155c94] text-xl hover:text-red-500"></i>
-            {% endif %}
-          </button>
-        </form>
-        <form action="{% url 'toggle_cart' product.pk %}" method="post" class="absolute top-12 right-3">
-          {% csrf_token %}
-          <button type="submit">
-            {% if product.id in user_cart %}
-              <i class="fas fa-cart-arrow-down text-[#155c94] text-xl"></i>
-            {% else %}
-              <i class="fas fa-cart-plus text-[#155c94] text-xl hover:text-[#009aa6]"></i>
-            {% endif %}
-          </button>
-        </form>
+        <div class="absolute top-3 right-3 space-y-2">
+          <form action="{% url 'toggle_favorite' product.pk %}" method="post">
+            {% csrf_token %}
+            <button type="submit">
+              {% if product.id in user_favorites %}
+                <i class="fas fa-heart text-red-500 text-xl"></i>
+              {% else %}
+                <i class="far fa-heart text-[#155c94] text-xl hover:text-red-500"></i>
+              {% endif %}
+            </button>
+          </form>
+          <form action="{% url 'toggle_cart' product.pk %}" method="post">
+            {% csrf_token %}
+            <button type="submit">
+              {% if product.id in user_cart %}
+                <i class="fas fa-cart-arrow-down text-[#155c94] text-xl"></i>
+              {% else %}
+                <i class="fas fa-cart-plus text-[#155c94] text-xl hover:text-[#009aa6]"></i>
+              {% endif %}
+            </button>
+          </form>
+        </div>
       {% endif %}
 
+      <!-- Clickable Link -->
       <a href="{% url 'product_detail' product.pk %}" class="flex flex-col flex-grow">
 
         <!-- Image -->
         {% if product.image %}
           <div class="h-48 mb-4 overflow-hidden rounded-lg">
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-full h-full object-cover" />
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" class="w-full h-full object-cover" />
           </div>
         {% else %}
           <div class="h-48 bg-gray-100 flex items-center justify-center rounded-lg mb-4">
@@ -103,29 +106,27 @@
         </div>
 
         <!-- Stock Status -->
-        {% if product.stock > 0 %}
-          <span class="absolute top-0 left-0 bg-green-500 text-white text-xs px-2 py-1 rounded-br-xl">In Stock</span>
-        {% else %}
-          <span class="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1 rounded-br-xl">Out of Stock</span>
-        {% endif %}
-
-        <!-- Rent Button -->
-        {% if user.is_authenticated %}
-          <a href="{% url 'rent_product' product.pk %}" class="mt-4 bg-[#155c94] text-white py-2 px-4 rounded-lg hover:bg-[#003b6f] transition text-center">
-            Rent Now
-          </a>
-        {% else %}
-          <a href="{% url 'account_login' %}?next={% url 'rent_product' product.pk %}" onclick="alert('You should log in first')"
-             class="mt-4 bg-[#155c94] text-white py-2 px-4 rounded-lg hover:bg-[#003b6f] transition text-center">
-            Rent Now
-          </a>
-        {% endif %}
+        <span class="absolute top-0 left-0 text-white text-xs px-2 py-1 rounded-br-xl {% if product.stock > 0 %}bg-green-500{% else %}bg-red-500{% endif %}">
+          {% if product.stock > 0 %}In Stock{% else %}Out of Stock{% endif %}
+        </span>
       </a>
+
+      <!-- Rent Button -->
+      {% if user.is_authenticated %}
+        <a href="{% url 'rent_product' product.pk %}" class="mt-4 bg-[#155c94] text-white py-2 px-4 rounded-lg hover:bg-[#003b6f] transition text-center">
+          Rent Now
+        </a>
+      {% else %}
+        <a href="{% url 'account_login' %}?next={% url 'rent_product' product.pk %}" onclick="alert('You should log in first')"
+           class="mt-4 bg-[#155c94] text-white py-2 px-4 rounded-lg hover:bg-[#003b6f] transition text-center">
+          Rent Now
+        </a>
+      {% endif %}
     </div>
     {% empty %}
-    <div class="col-span-full text-center text-gray-600 py-12">
-      <p class="text-lg">No products available at the moment.</p>
-      <p class="text-sm">Try adjusting your search or filters.</p>
+    <div class="col-span-full text-center text-gray-600 py-16">
+      <p class="text-xl font-semibold">No products available at the moment.</p>
+      <p class="text-sm mt-2">Try adjusting your search or filters.</p>
     </div>
     {% endfor %}
   </section>
@@ -139,7 +140,9 @@
         &lt;
       </a>
     {% endif %}
-    <span class="text-sm text-[#000000] font-medium px-4 py-2">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+    <span class="text-sm text-[#000000] font-medium px-4 py-2">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    </span>
     {% if page_obj.has_next %}
       <a href="?{% if request.GET.q %}q={{ request.GET.q }}&{% endif %}{% if selected_category %}category={{ selected_category }}&{% endif %}{% if selected_sort %}sort={{ selected_sort }}&{% endif %}page={{ page_obj.next_page_number }}"
          class="px-4 py-2 bg-[#1f2937] text-white rounded-full hover:bg-[#155c94] transition hover:scale-110 text-xl">
