@@ -20,18 +20,20 @@ This platform is expected to offer substantial benefits to the community, especi
 
 
 # 3.Steps to Use the System Based on User Stories
-For Renters
+	For Renters
 1.	Sign up or log in to the system.
 2.	Browse equipment by category.
 3.	Add desired items to the cart and select rental duration in months.
 4.	Confirm the rental and wait for equipment preparation.
 5.	Track rental status via the dashboard.
-For Donaters
+
+	For Donaters
 1.	Sign up or log in to the system.
 2.	Go to the donation page, upload images, and fill in product information.
 3.	Submit the donation request and wait for approval.
 4.	Check donation status via the dashboard.
-For Reviewers
+
+	For Reviewers
 1.	After using the equipment, go to the product detail page.
 2.	Write a review and give a star rating.
 3.	Submit the review to share your feedback with others.
