@@ -23,7 +23,7 @@ This platform is expected to offer substantial benefits to the community, partic
 
 ## 2. User Stories
 
-### 1. Renter – A user who wants to borrow medical equipment
+### 1. Renter  A user who wants to borrow medical equipment
 - As a user, I want to browse available medical equipment by category so I can quickly find the item I need.
 - I want to view product details, including images, descriptions, rental costs, and stock availability.
 - I want to add items to a shopping cart and choose how many months I want to borrow them.
@@ -31,14 +31,14 @@ This platform is expected to offer substantial benefits to the community, partic
 - I want to view my rental history and track the status of ongoing rentals.
 - I want to receive reminders about upcoming payment deadlines and equipment return dates.
 
-### 2. Donater – A user who wants to donate medical equipment
+### 2. Donater  A user who wants to donate medical equipment
 - As a user, I want to submit a form to donate unused or lightly-used medical equipment.
 - I want to upload pictures and describe the condition of the equipment I’m donating.
 - I want to be notified whether my donation has been accepted or rejected.
 - I want to track the donation status via a personal dashboard.
 - I want to feel assured that my donation will go to someone in genuine need.
 
-### 3. Reviewer – A user who wants to leave reviews
+### 3. Reviewer  A user who wants to leave reviews
 - As a user, I want to leave a review with a rating and written comment after using a product.
 - I want my review to help others make better decisions when renting medical equipment.
 - I want to browse through other users’ reviews and ratings before choosing a product.
