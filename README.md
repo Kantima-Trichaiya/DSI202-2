@@ -57,7 +57,7 @@ This application is designed to provide significant benefits to various groups, 
 6. Receive notifications when the equipment is ready for pickup or scheduled for delivery.
 7. Use the user dashboard to track rental status and receive automated reminders before return deadlines to ensure timely returns.
 
-### For Donors
+### For Donate
 
 1. Register or log in, selecting the donor role.
 2. Navigate to the donation page and fill out the donation form with details about the equipment.
