@@ -1,82 +1,91 @@
-## dsi202_2025
+# Abstract
 
+This project presents **Care Every Home**, a comprehensive web-based application designed to support both the borrowing and donation of essential medical equipment. Our primary goal is to provide equitable and affordable access to critical devices such as wheelchairs, hospital beds, walking aids, and other mobility supports—especially for individuals facing temporary or urgent medical needs without the burden of high upfront costs.
 
+The platform addresses a significant gap in healthcare accessibility by allowing users to rent medical equipment for short-term use, avoiding the heavy financial strain of purchasing costly devices that may only be needed for a limited time. Additionally, the system encourages community participation by enabling members to donate unused or surplus medical equipment. These donated items are then recirculated, fostering sustainability and reducing medical waste, thereby supporting environmental responsibility and the principles of a circular economy.
 
-## 1. Abstract
+Key features of the platform include:
 
-This project presents a **web-based application** designed to support both the borrowing and donation of medical equipment. The primary objective is to facilitate equitable access to essential medical devices such as **wheelchairs, hospital beds, walking aids**, and other mobility supports without requiring significant financial investment, particularly during temporary or urgent periods of medical need.
+- **User Registration and Role Selection:** Users can register and choose roles such as borrower or donor to tailor their experience.
+- **Comprehensive Equipment Management:** Users can browse, search, filter, and view detailed information about medical equipment.
+- **Flexible Rental System:** The platform supports rental duration selection, shopping cart management, and automated notifications.
+- **Donation Submission and Tracking:** Donors can easily submit equipment donations with images and descriptions and monitor the status of their submissions.
+- **User-Generated Reviews and Ratings:** A community-driven review system helps maintain transparency and improve service quality.
+- **Favorites Management:** Users can bookmark frequently used or preferred items for quick access.
+- **Automated Reminders:** The system sends timely notifications for rental payments and equipment return deadlines, ensuring smooth operations.
 
-In addition to helping individuals in need, this platform provides an avenue for members of the community to **donate their unused or surplus medical equipment**. Such donations can then be recirculated to others, promoting **sustainability** and reducing **medical waste**. The system fosters a sense of **community involvement**, **mutual support**, and **resource sharing**, aligning with goals of social responsibility and circular economy principles.
-
-### Key Features
-- User registration with the ability to select roles (borrower or donor)
-- Equipment listing, searching, filtering, and detailed browsing
-- Rental functionality with duration selection and cart management
-- Donation submission forms with status tracking
-- A user-generated review and rating system
-- Favorites management for quick access
-- Automated reminders for rental payments and return deadlines
-
-This platform is expected to offer substantial benefits to the community, particularly to **elderly individuals**, **caregivers**, **patients recovering at home**, and those with **limited financial resources**. By increasing accessibility and promoting the circulation of medical equipment, the system supports **social equity** and **environmental sustainability**.
+This application is designed to provide significant benefits to various groups, including elderly individuals, caregivers, patients recovering at home, and those with limited financial resources. By enhancing accessibility and promoting equipment sharing, Care Every Home supports social equity and environmental sustainability, helping to build a caring and inclusive community.
 
 ---
 
-## 2. User Stories
+# User Stories
 
-### 1. Renter  A user who wants to borrow medical equipment
-- As a user, I want to browse available medical equipment by category so I can quickly find the item I need.
-- I want to view product details, including images, descriptions, rental costs, and stock availability.
-- I want to add items to a shopping cart and choose how many months I want to borrow them.
-- I want to confirm my rental, pay the required fee, and receive a notification once the equipment is ready.
-- I want to view my rental history and track the status of ongoing rentals.
-- I want to receive reminders about upcoming payment deadlines and equipment return dates.
+## 1. Renter — Users who want to borrow medical equipment
 
-### 2. Donater  A user who wants to donate medical equipment
-- As a user, I want to submit a form to donate unused or lightly-used medical equipment.
-- I want to upload pictures and describe the condition of the equipment I’m donating.
-- I want to be notified whether my donation has been accepted or rejected.
-- I want to track the donation status via a personal dashboard.
-- I want to feel assured that my donation will go to someone in genuine need.
+- As a user, I want to browse available medical equipment categorized by type, so I can quickly find the items suited to my needs.
+- I want detailed product information, including images, descriptions, rental costs, and stock availability, to make informed decisions.
+- I want to add equipment to a shopping cart and select rental duration, enabling flexible and convenient usage.
+- I want to complete the rental process online, make payments securely, and receive timely notifications once the equipment is prepared.
+- I want to track my rental history and monitor the status of current rentals for better management.
+- I want to receive reminders about upcoming payment deadlines and equipment return dates to avoid any penalties.
 
-### 3. Reviewer  A user who wants to leave reviews
-- As a user, I want to leave a review with a rating and written comment after using a product.
-- I want my review to help others make better decisions when renting medical equipment.
-- I want to browse through other users’ reviews and ratings before choosing a product.
-- I want to like other helpful reviews and see which products are most positively reviewed by the community.
+## 2. Donate — Users who want to donate medical equipment
+
+- As a user, I want to submit a donation form for unused or lightly used medical equipment, ensuring it benefits someone in need.
+- I want to upload photos and provide detailed descriptions of the equipment's condition, so recipients can trust its usability.
+- I want to receive notifications regarding the approval or rejection of my donation.
+- I want to monitor my donation status through a personal dashboard to stay updated.
+- I want confidence that my donation is making a meaningful impact within the community.
+
+## 3. Reviewer — Users who want to leave feedback
+
+- As a user, I want to leave a review with a star rating and comments after using rented equipment, helping others make informed choices.
+- I want to browse other users' reviews and ratings before selecting products to ensure quality and reliability.
+- I want to endorse helpful reviews by liking them and identify which products have the highest community satisfaction.
 
 ---
 
-## 3. Steps to Use the System Based on User Stories
+# Steps to Use the System Based on User Stories
 
 ### For Renters
-1. Sign up or log in to the system and select the role of **renter**.
-2. Browse or search medical equipment by category (e.g., mobility aids, beds, oxygen devices).
-3. Click on a product to view its details, including pricing, availability, and user reviews.
-4. Add desired items to the cart and specify the number of months for rental.
-5. Review the rental summary and confirm the transaction.
-6. Await notification about equipment preparation or pickup/delivery.
-7. Use the dashboard to track rental status and receive reminders before return deadlines.
 
-### For Donaters
-1. Sign up or log in to the system and select the role of **donater**.
-2. Navigate to the donation page and complete the donation form.
-3. Upload images and provide details such as product name, condition, and description.
-4. Submit the donation and await approval from the admin or review team.
-5. Use the dashboard to monitor the approval status and donation history.
+1. Register or log in, selecting the role of renter.
+2. Browse or search medical equipment by categories such as mobility aids, hospital beds, or oxygen devices.
+3. Select a product to view detailed information, including rental price, availability, and user reviews.
+4. Add items to the cart and specify the rental duration (e.g., number of months).
+5. Review the order summary, confirm the rental, and proceed with payment.
+6. Receive notifications when the equipment is ready for pickup or scheduled for delivery.
+7. Use the user dashboard to track rental status and receive automated reminders before return deadlines to ensure timely returns.
+
+### For Donors
+
+1. Register or log in, selecting the donor role.
+2. Navigate to the donation page and fill out the donation form with details about the equipment.
+3. Upload clear images showing the equipment's condition.
+4. Submit the donation and await review and approval by the administration team.
+5. Monitor donation status and history via the personal dashboard.
+6. Receive updates and assurance that the donated equipment will be redistributed to those in need.
 
 ### For Reviewers
-1. After using a rented item, navigate to the product’s detail page.
-2. Click on the **"Write a Review"** button to submit feedback.
-3. Select a star rating (1 to 5 stars), write a brief comment, and submit.
-4. Browse other users’ reviews to gain insights into product quality and service experience.
-5. Like or support reviews that are helpful or informative.
+
+1. After using rented equipment, visit the product detail page.
+2. Click the “Write a Review” button to submit your feedback.
+3. Provide a star rating (1 to 5 stars) and write comments reflecting your experience.
+4. Browse other user reviews to help inform your future rental decisions.
+5. Like helpful reviews to support community engagement and highlight quality feedback.
 
 ---
 
-#### youtube
-https://youtu.be/zmpZf31DI00?si=9x-D-5p_MWC8GruW
+# Conclusion
 
+Care Every Home is not just a platform for renting and donating medical equipment—it embodies a community-driven approach to healthcare support, social responsibility, and sustainability. Through its thoughtful design and robust feature set, it aims to ease the burden on families, support patients on their recovery journey, and foster a culture of sharing and caring.
 
+By addressing financial barriers and promoting reuse of equipment, Care Every Home contributes to a more equitable and environmentally conscious society. The system’s scalable architecture allows future integration with healthcare providers, volunteer services, and real-time inventory management to further enhance service quality and reach.
 
+This project represents a meaningful step towards making care accessible and dignified for all, ensuring that every home can become a true place of healing.
 
+---
 
+# Presentation Video
+
+[Watch the presentation video here](https://youtu.be/zmpZf31DI00?si=9x-D-5p_MWC8GruW)
