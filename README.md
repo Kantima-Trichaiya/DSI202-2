@@ -1,6 +1,6 @@
 # Abstract
 
-This project presents **Care Every Home**, a comprehensive web-based application designed to support both the borrowing and donation of essential medical equipment. Our primary goal is to provide equitable and affordable access to critical devices such as wheelchairs, hospital beds, walking aids, and other mobility supports—especially for individuals facing temporary or urgent medical needs without the burden of high upfront costs.
+This project presents **Care Every Home**, a comprehensive web-based application designed to support both the borrowing and donation of essential medical equipment. Our primary goal is to provide equitable and affordable access to critical devices such as wheelchairs, hospital beds, walking aids, and other mobility supports especially for individuals facing temporary or urgent medical needs without the burden of high upfront costs.
 
 The platform addresses a significant gap in healthcare accessibility by allowing users to rent medical equipment for short-term use, avoiding the heavy financial strain of purchasing costly devices that may only be needed for a limited time. Additionally, the system encourages community participation by enabling members to donate unused or surplus medical equipment. These donated items are then recirculated, fostering sustainability and reducing medical waste, thereby supporting environmental responsibility and the principles of a circular economy.
 
